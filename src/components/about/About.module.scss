@@ -1,0 +1,35 @@
+@import "../../variables.modules";
+
+.pink {
+  color: $pink;
+}
+
+.green {
+  color: #64ffda;
+}
+
+.skills {
+  columns: 2; /* Set default to 2 columns */
+  list-style-type: none; /* Remove default bullets */
+  margin-top: 0;
+  @media only screen and (min-width: 940px) {
+    columns: 2;
+    list-style-type: none; /* Remove default bullets */
+  }
+
+  li {
+    margin: 0;
+    line-height: 0.75;
+    display: inline-block;
+    position: relative;
+    padding-left: 20px; /* Space for any custom bullet */
+    width: 100%;
+    
+    &::before {
+      content: "‣"; /* Example bullet - use desired symbol */
+      position: absolute;
+      left: 0; /* Position at the start of the list item */
+      color: #4369ae; /* Adjust color for the bullet */
+    }
+  }
+}

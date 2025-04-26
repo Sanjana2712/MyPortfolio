@@ -1,0 +1,47 @@
+.timeline-container {
+  position: center;
+  padding: 0 0 0 180px;
+}
+
+.timeline {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+}
+
+.timeline-item {
+  position: relative;
+  display: flex;
+  align-items: flex-start; /* Start alignment for the duration and content */
+  margin-bottom: 20px;
+  
+}
+
+.timeline-box {
+  display: flex;
+  padding: 1.3rem;
+  flex-direction: row; /* Horizontal alignment */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  border-radius: 4px;
+}
+
+.duration {
+  min-width: 130px; /* Ensure width to fit the date inline */
+  text-align: left;
+  color: #808495;
+  margin-top: 0.5rem; /* Align with content using margin */
+}
+
+.timeline-content {
+  width: 600px; /* Fixed width for uniform description boxes */
+  padding-left: 1rem;
+  border-radius: 4px;
+  background-color: transparent; /* Transparent by default */
+}
+
+.timeline-box:hover {
+  background-color: rgba(255, 255, 255, 0.056);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2); /* Increased shadow for depth */
+  transform: scale(1.05); 
+}
