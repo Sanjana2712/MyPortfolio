@@ -80,11 +80,11 @@ export const info = {
             label: 'volunteering',
         }
     ],
-    portfolio: [ // This is where your portfolio projects will be detailed
+    portfolio: [ 
         {
             title: "Gatormart - Marketplace",
-            live: "https://paytonpierce.dev", //this should be a link to the live version of your project, think github pages, netlify, heroku, etc. Or your own domain, if you have it.
-            source: "https://github.com/Sanjana2712/GatorMart", // this should be a link to the **repository** of the project, where the code is hosted.
+            live: "", 
+            source: "https://github.com/Sanjana2712/GatorMart", 
             image: mock1
         },
         {
