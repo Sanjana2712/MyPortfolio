@@ -131,7 +131,7 @@ export default function Experience() {
                 <Typography style={{marginBottom:'0.8rem', color: '#9498a9', fontSize: '0.9rem'}}>
                   {exp.company}
                 </Typography>
-                <Typography className="description-text">
+                <Typography className="description-text" style={{ marginBottom: '0.1rem', fontSize: '0.9rem' }}>
                   {exp.responsibilities.join('. ')}
                 </Typography>
               </Box>

@@ -52,22 +52,19 @@
 }
 
 :global(.light) .timeline-content .MuiTypography-root:nth-child(2) {
-  color: #6b7280 !important;
+  color: #747c8b !important;
 }
 
 /* Default light mode description text */
 .description-text {
-  color: #4b5563 !important;
-  opacity: 0.9 !important;
-  margin-bottom: 0.1rem !important;
-  font-size: 0.9rem !important;
+  color: #646e85;
+  opacity: 0.9;
 }
 
-/* Dark mode override for description text - make more visible */
-:global(.dark) .description-text,
-:global(.dark) .timeline-content .description-text {
-  color: #e2e8f0 !important;
-  opacity: 0.9 !important;
+/* Dark mode override for description text */
+:global(.dark) .description-text {
+  color: #ebedf1 !important;
+  opacity: 0.78 !important;
 }
 
 /* Simple cursor follower for dark mode */
