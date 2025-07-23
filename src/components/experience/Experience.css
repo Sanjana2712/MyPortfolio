@@ -13,40 +13,38 @@
 .timeline-item {
   position: relative;
   display: flex;
-  align-items: flex-start; /* Start alignment for the duration and content */
+  align-items: flex-start;
   margin-bottom: 20px;
-  
 }
 
 .timeline-box {
   display: flex;
   padding: 1.3rem;
-  flex-direction: row; /* Horizontal alignment */
+  flex-direction: row;
   transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
   border-radius: 4px;
 }
 
 .duration {
-  min-width: 130px; /* Ensure width to fit the date inline */
+  min-width: 130px;
   text-align: left;
   color: #808495;
-  margin-top: 0.5rem; /* Align with content using margin */
+  margin-top: 0.5rem;
 }
 
 .timeline-content {
-  width: 600px; /* Fixed width for uniform description boxes */
+  width: 600px;
   padding-left: 1rem;
   border-radius: 4px;
-  background-color: transparent; /* Transparent by default */
+  background-color: transparent;
 }
 
 .timeline-box:hover {
   background-color: rgba(255, 255, 255, 0.056);
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2); /* Increased shadow for depth */
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
   transform: scale(1.05); 
 }
 
-/* Light mode text colors for better readability */
 :global(.light) .timeline-content .MuiTypography-root:first-child {
   color: #1f2937 !important;
 }
@@ -55,37 +53,12 @@
   color: #747c8b !important;
 }
 
-/* Default light mode description text */
 .description-text {
   color: #646e85;
   opacity: 0.9;
 }
 
-/* Dark mode override for description text */
 :global(.dark) .description-text {
   color: #ebedf1 !important;
   opacity: 0.78 !important;
-}
-
-/* Simple cursor follower for dark mode */
-.cursor-follower {
-  position: fixed;
-  width: 200px;
-  height: 200px;
-  background: radial-gradient(circle, rgba(59, 130, 246, 0.2) 0%, transparent 70%);
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 9999;
-  transform: translate(-50%, -50%);
-  transition: opacity 0.3s ease;
-  opacity: 0;
-  mix-blend-mode: screen;
-}
-
-:global(.dark) .cursor-follower {
-  opacity: 1;
-}
-
-:global(.light) .cursor-follower {
-  opacity: 0;
 }

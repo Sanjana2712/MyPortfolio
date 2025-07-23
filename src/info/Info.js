@@ -54,9 +54,9 @@ export const info = {
             label: 'linkedin'
         },
         {
-            link: "https://twitter.com",
-            icon: "fa fa-twitter",
-            label: 'twitter'
+            link: "https://medium.com/@gsanjana97",
+            icon: "fa fa-medium",
+            label: 'medium'
         }
     ],
     bio: "I’m a full stack developer with a deep passion for JavaScript, React and all things web development. I studied CompSci at San Francisco State, I enjoy long walks on the beach, and I believe artificial intelligence will inevitably rule us all one day.",
