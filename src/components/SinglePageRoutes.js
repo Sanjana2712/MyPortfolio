@@ -8,6 +8,6 @@ export default function SinglePageRoutes({refs, darkMode}) {
     return (<Box mt={'3rem'}>
         <Home innerRef={refs.refHome}/>
         <About innerRef={refs.refAbout} darkMode={darkMode}/>
-        <Portfolio innerRef={refs.refPortfolio}/>
+        <Portfolio innerRef={refs.refPortfolio} darkMode={darkMode}/>
     </Box>)
 }

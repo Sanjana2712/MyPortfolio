@@ -62,8 +62,8 @@ export const info = {
     bio: "I’m a full stack developer with a deep passion for JavaScript, React and all things web development. I studied CompSci at San Francisco State, I enjoy long walks on the beach, and I believe artificial intelligence will inevitably rule us all one day.",
     skills:
         {
-            proficientWith: ['Python','Javascript/Typescript', 'Java', 'SQL', 'Html5', 'CSS3'],
-            exposedTo: ['React.js', 'Node.js', 'Express.js','Redux','Bootstrap','Tailwind CSS','ViteJS', 'Git', 'Jest', 'Postman', 'ESLint', 'PowerBI']
+            proficientWith: ['Python','Javascript', 'Typescript', 'SQL', 'Html5','CSS3'],
+            exposedTo: ['React.js', 'Node.js', 'Next.js','Express.js','Tailwind CSS','Docker','Pandas','SonarQube', 'Cypress', 'Jest', 'Postman', 'AWS']
         }
     ,
     hobbies: [
@@ -82,20 +82,23 @@ export const info = {
     ],
     portfolio: [ 
         {
-            title: "Gatormart - Marketplace",
+            title: "GatorMart",
+            description: "Full-stack e-commerce marketplace with real-time inventory management and secure payment processing.",
             live: "", 
             source: "https://github.com/Sanjana2712/GatorMart", 
             image: mock1
         },
         {
-            title: "HealthShare - Digital Repository",
+            title: "HealthShare",
+            description: "AI-powered platform that consolidates and analyzes COVID-19 healthcare worker experiences.",
             live: "http://18.218.238.186",
             source: "https://github.com/Sanjana2712/health-share",
             image: mock2
         },
         {
-            title: "Luna - Children's AI",
-            live: "https://paytonpierce.dev",
+            title: "Luna",
+            description: "AI-powered children's storytelling application with personalized narrative generation and interactive features.",
+            live: "",
             source: "https://github.com/Sanjana2712/JadeMind",
             image: mock3
         },

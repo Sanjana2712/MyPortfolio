@@ -6,14 +6,14 @@ export default function Experience({darkMode}) {
 
   const experiences = [
     {
-      title: 'Full Stack Developer',
+      title: 'Software Engineer',
       company: 'DXC Technology',
       duration: 'Jan 2024 — Present',
       location: 'Remote, USA',
       responsibilities: [
         'Built high-performance REST APIs with Elasticsearch achieving 400ms response times. Architected real-time analytics dashboards and monitoring systems processing 100k+ metrics per minute. Optimized React applications reducing load times by 20% while maintaining 85% test coverage.'
       ],
-      techStack: ['React', 'JavaScript', 'AWS', 'PostgreSQL', 'CI/CD', 'Cypress', 'JWT']
+      techStack: ['React', 'JavaScript', 'AWS', 'PostgreSQL', 'Jest','CI/CD','REST']
     },
     {
       title: 'Graduate Teaching Associate',

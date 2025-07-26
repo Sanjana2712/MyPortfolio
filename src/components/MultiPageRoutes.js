@@ -10,7 +10,7 @@ export default function MultiPageRoutes({darkMode}) {
         <Routes>
             <Route exact path={'/'} element={<Home />} />
             <Route exact path={'/about'} element={<About darkMode={darkMode} />} />
-            <Route exact path={'/portfolio'} element={<Portfolio />} />
+            <Route exact path={'/portfolio'} element={<Portfolio darkMode={darkMode} />} />
             <Route exact path={'/experience'} element={<Experience darkMode={darkMode} />} />
         </Routes>
     )

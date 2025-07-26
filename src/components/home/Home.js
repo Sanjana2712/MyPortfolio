@@ -1,6 +1,6 @@
 import React from 'react';
 import Style from './Home.module.scss';
-import me from '../../img/dummy.jpg';
+import me from '../../img/dummy1.jpg';
 import classNames from 'classnames';
 import EmojiBullet from "./EmojiBullet";
 import {Box, Button} from "@mui/material";
@@ -224,9 +224,12 @@ export default function Home({innerRef}) {
                      borderWidth: '1px',
                      transition: 'all 0.2s ease',
                      '&:hover': {
-                        borderColor: 'white',
-                        color: 'white',
-                        backgroundColor: 'transparent'
+                        borderColor: 'rgb(96, 106, 136)',
+                        color: 'rgb(96, 106, 136)',
+                        backgroundColor: 'transparent',
+                        fontWeight: '700',
+                        transform: 'translateY(-1px)',
+                        boxShadow: '0 2px 8px rgba(96, 106, 136, 0.3)'
                      }
                   }}
                   onClick={() => {
