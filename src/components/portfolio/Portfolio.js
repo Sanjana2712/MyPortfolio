@@ -11,7 +11,15 @@ export default function Portfolio({innerRef, darkMode}) {
         }}>
             <Grid container display={'flex'} justifyContent={'center'} spacing={4}>
                 {info.portfolio.map((project, index) => (
-                   <Grid item xs={12} sm={6} md={4} key={index}>
+                   <Grid item xs={12} sm={6} md={4} key={index}
+                         sx={{
+                            /* Mobile-only Grid fixes - force single column */
+                            '@media (max-width: 767px)': {
+                               width: '100%',
+                               maxWidth: '100%',
+                               flexBasis: '100%'
+                            }
+                         }}>
                        <PortfolioBlock 
                            image={project.image} 
                            live={project.live} 

@@ -10,6 +10,31 @@ body {
     color: $dark;
     background-color: $white;
     box-sizing: border-box;
+    overflow-x: hidden;
+    
+    /* Mobile phones (320px - 767px) */
+    @media screen and (max-width: 767px) {
+        font-size: clamp(0.875rem, 4vw, 1rem);
+        line-height: 1.5;
+    }
+    
+    /* Tablets (768px - 1023px) */
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        font-size: clamp(1rem, 2.5vw, 1.125rem);
+        line-height: 1.4;
+    }
+    
+    /* Large monitors (2000px+) */
+    @media screen and (min-width: 2000px) {
+        font-size: clamp(1.125rem, 1.2vw, 1.375rem);
+        line-height: 1.6;
+    }
+    
+    /* Ultra-wide monitors (2560px+) */
+    @media screen and (min-width: 2560px) {
+        font-size: clamp(1.25rem, 1vw, 1.5rem);
+        line-height: 1.7;
+    }
 }
 
 li {
@@ -32,8 +57,115 @@ a:active {
 
 img {
     max-width: 100%;
+    height: auto;
 }
 
 ul {
     list-style-type: none;
+}
+
+/* Responsive container utilities */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    
+    /* Mobile phones (320px - 767px) */
+    @media screen and (max-width: 767px) {
+        padding: 0 1rem;
+        max-width: 100%;
+    }
+    
+    /* Tablets (768px - 1023px) */
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        padding: 0 2rem;
+        max-width: 100%;
+    }
+    
+    /* Large monitors (2000px+) */
+    @media screen and (min-width: 2000px) {
+        max-width: 1600px;
+        padding: 0 2rem;
+    }
+    
+    /* Ultra-wide monitors (2560px+) */
+    @media screen and (min-width: 2560px) {
+        max-width: 2000px;
+        padding: 0 3rem;
+    }
+}
+
+/* Touch-friendly interactive elements */
+button, 
+a[role="button"], 
+input[type="button"], 
+input[type="submit"],
+.interactive {
+    /* Mobile phones (320px - 767px) */
+    @media screen and (max-width: 767px) {
+        min-height: 44px;
+        min-width: 44px;
+        touch-action: manipulation;
+        padding: 0.75rem 1rem;
+    }
+    
+    /* Tablets (768px - 1023px) */
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        min-height: 40px;
+        min-width: 40px;
+        touch-action: manipulation;
+    }
+}
+
+/* Responsive spacing utilities */
+.section-padding {
+    /* Mobile phones (320px - 767px) */
+    @media screen and (max-width: 767px) {
+        padding: 2rem 0;
+    }
+    
+    /* Tablets (768px - 1023px) */
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        padding: 3rem 0;
+    }
+    
+    /* Large monitors (2000px+) */
+    @media screen and (min-width: 2000px) {
+        padding: 5rem 0;
+    }
+    
+    /* Ultra-wide monitors (2560px+) */
+    @media screen and (min-width: 2560px) {
+        padding: 6rem 0;
+    }
+}
+
+/* Material-UI Container overrides */
+.MuiContainer-root {
+    /* Mobile phones (320px - 767px) */
+    @media screen and (max-width: 767px) {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+        max-width: 100% !important;
+    }
+    
+    /* Tablets (768px - 1023px) */
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        padding-left: 2rem !important;
+        padding-right: 2rem !important;
+        max-width: 100% !important;
+    }
+    
+    /* Large monitors (2000px+) */
+    @media screen and (min-width: 2000px) {
+        max-width: 1600px !important;
+        margin: 0 auto !important;
+    }
+    
+    /* Ultra-wide monitors (2560px+) */
+    @media screen and (min-width: 2560px) {
+        max-width: 2000px !important;
+        margin: 0 auto !important;
+    }
 }

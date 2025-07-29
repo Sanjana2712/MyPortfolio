@@ -3,11 +3,72 @@
   padding: 0 0 0 180px;
 }
 
+/* Mobile phones (320px - 767px) */
+@media screen and (max-width: 767px) {
+  .timeline-container {
+    padding: 0 1rem;
+  }
+}
+
+/* Tablets (768px - 1023px) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .timeline-container {
+    padding: 0 2rem 0 100px;
+  }
+}
+
+/* Large monitors (2000px+) */
+@media screen and (min-width: 2000px) {
+  .timeline-container {
+    padding: 0 0 0 250px;
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+}
+
+/* Ultra-wide monitors (2560px+) */
+@media screen and (min-width: 2560px) {
+  .timeline-container {
+    padding: 0 0 0 300px;
+    max-width: 2000px;
+    margin: 0 auto;
+  }
+}
+
 .timeline {
   position: relative;
   width: 100%;
   max-width: 900px;
   margin: auto;
+}
+
+/* Mobile phones (320px - 767px) */
+@media screen and (max-width: 767px) {
+  .timeline {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+/* Tablets (768px - 1023px) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .timeline {
+    max-width: 650px;
+  }
+}
+
+/* Large monitors (2000px+) */
+@media screen and (min-width: 2000px) {
+  .timeline {
+    max-width: 1200px;
+  }
+}
+
+/* Ultra-wide monitors (2560px+) */
+@media screen and (min-width: 2560px) {
+  .timeline {
+    max-width: 1400px;
+  }
 }
 
 .timeline-item {
@@ -25,11 +86,86 @@
   border-radius: 4px;
 }
 
+/* Mobile phones (320px - 767px) */
+@media screen and (max-width: 767px) {
+  .timeline-box {
+    flex-direction: column;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+}
+
+/* Tablets (768px - 1023px) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .timeline-box {
+    padding: 1.2rem;
+    flex-direction: row;
+    border-radius: 6px;
+  }
+}
+
+/* Large monitors (2000px+) */
+@media screen and (min-width: 2000px) {
+  .timeline-box {
+    padding: 2rem;
+    border-radius: 12px;
+  }
+}
+
+/* Ultra-wide monitors (2560px+) */
+@media screen and (min-width: 2560px) {
+  .timeline-box {
+    padding: 2.5rem;
+    border-radius: 16px;
+  }
+}
+
 .duration {
   min-width: 130px;
   text-align: left;
   color: #808495;
   margin-top: 0.5rem;
+}
+
+/* Mobile phones (320px - 767px) */
+@media screen and (max-width: 767px) {
+  .duration {
+    min-width: auto;
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+    font-size: clamp(0.8rem, 3.5vw, 0.9rem);
+    text-align: left;
+    font-weight: 500;
+  }
+}
+
+/* Tablets (768px - 1023px) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .duration {
+    min-width: 110px;
+    font-size: clamp(0.9rem, 2.5vw, 0.95rem);
+    margin-top: 0.375rem;
+  }
+}
+
+/* Large monitors (2000px+) */
+@media screen and (min-width: 2000px) {
+  .duration {
+    min-width: 180px;
+    font-size: clamp(1rem, 1vw, 1.125rem);
+    font-weight: 500;
+    margin-top: 0.75rem;
+  }
+}
+
+/* Ultra-wide monitors (2560px+) */
+@media screen and (min-width: 2560px) {
+  .duration {
+    min-width: 220px;
+    font-size: clamp(1.125rem, 0.8vw, 1.25rem);
+    font-weight: 500;
+    margin-top: 1rem;
+  }
 }
 
 .timeline-content {
@@ -39,10 +175,66 @@
   background-color: transparent;
 }
 
+/* Mobile phones (320px - 767px) */
+@media screen and (max-width: 767px) {
+  .timeline-content {
+    width: 100%;
+    padding-left: 0;
+  }
+}
+
+/* Tablets (768px - 1023px) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .timeline-content {
+    width: 450px;
+    padding-left: 0.75rem;
+  }
+}
+
+/* Large monitors (2000px+) */
+@media screen and (min-width: 2000px) {
+  .timeline-content {
+    width: 800px;
+    padding-left: 2rem;
+  }
+}
+
+/* Ultra-wide monitors (2560px+) */
+@media screen and (min-width: 2560px) {
+  .timeline-content {
+    width: 1000px;
+    padding-left: 2.5rem;
+  }
+}
+
 .timeline-box:hover {
   background-color: rgba(255, 255, 255, 0.056);
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
   transform: scale(1.05); 
+}
+
+/* Mobile phones (320px - 767px) */
+@media screen and (max-width: 767px) {
+  .timeline-box:hover {
+    transform: none; /* Disable transform on mobile for better touch experience */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  }
+}
+
+/* Large monitors (2000px+) */
+@media screen and (min-width: 2000px) {
+  .timeline-box:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+    transform: scale(1.03);
+  }
+}
+
+/* Ultra-wide monitors (2560px+) */
+@media screen and (min-width: 2560px) {
+  .timeline-box:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transform: scale(1.02);
+  }
 }
 
 :global(.light) .timeline-content .MuiTypography-root:first-child {

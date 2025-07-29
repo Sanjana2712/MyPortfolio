@@ -32,6 +32,17 @@ function PortfolioBlock(props) {
          style={cardStyle}
          onMouseEnter={() => setIsHovered(true)}
          onMouseLeave={() => setIsHovered(false)}
+         sx={{
+            /* Mobile-only fixes */
+            '@media (max-width: 767px)': {
+               height: 'auto',
+               padding: '1rem 1rem 1.25rem 1rem',
+               borderRadius: '12px',
+               transform: 'none !important',
+               boxShadow: '0 2px 12px rgba(0,0,0,0.15) !important',
+               marginBottom: '1.5rem'
+            }
+         }}
       >
           <Box 
             component={'img'} 
@@ -45,25 +56,56 @@ function PortfolioBlock(props) {
                 marginBottom: '1rem',
                 alignSelf: 'center'
             }}
+            sx={{
+               /* Mobile-only image fixes */
+               '@media (max-width: 767px)': {
+                  height: 'auto',
+                  aspectRatio: '16/10',
+                  marginBottom: '0.75rem',
+                  borderRadius: '8px'
+               }
+            }}
          />
          
          <Box sx={{ flexGrow: 1, display: 'flex', flexDirection: 'column' }}>
-            <h2 style={{ 
+            <Box component="h2" sx={{ 
                fontSize: '1.3rem', 
                marginBottom: '0.5rem',
                marginTop: '0',
-               fontWeight: '600'
-            }}>{title}</h2>
+               fontWeight: '600',
+               /* Mobile-only title fixes */
+               '@media (max-width: 767px)': {
+                  fontSize: 'clamp(1.1rem, 4vw, 1.25rem)',
+                  marginBottom: '0.375rem',
+                  lineHeight: 1.2
+               }
+            }}>{title}</Box>
             
-            <p style={{ 
+            <Box component="p" sx={{ 
                fontSize: '0.9rem',
                lineHeight: '1.5',
                marginBottom: '1rem',
                color: darkMode ? '#888' : '#555',
-               flexGrow: 1
-            }}>{description}</p>
+               flexGrow: 1,
+               /* Mobile-only description fixes */
+               '@media (max-width: 767px)': {
+                  fontSize: 'clamp(0.8rem, 3.5vw, 0.875rem)',
+                  lineHeight: '1.4',
+                  marginBottom: '0.75rem',
+                  flexGrow: 0
+               }
+            }}>{description}</Box>
             
-            <Box display={'flex'} justifyContent={'space-between'} alignItems={'center'} mt={'auto'}>
+            <Box display={'flex'} justifyContent={'space-between'} alignItems={'center'} mt={'auto'}
+                 sx={{
+                    /* Mobile-only button container fixes */
+                    '@media (max-width: 767px)': {
+                       flexDirection: 'column',
+                       gap: '0.5rem',
+                       alignItems: 'stretch',
+                       mt: '0.5rem'
+                    }
+                 }}>
                <Button
                   variant="outlined"
                   endIcon={<ArrowForward />}
@@ -76,6 +118,13 @@ function PortfolioBlock(props) {
                      borderRadius: '8px',
                      padding: '0.5rem 1rem',
                      fontSize: '0.875rem',
+                     /* Mobile-only button fixes */
+                     '@media (max-width: 767px)': {
+                        padding: '0.5rem 0.75rem',
+                        fontSize: 'clamp(0.8rem, 3.5vw, 0.875rem)',
+                        minHeight: '44px',
+                        borderRadius: '6px'
+                     },
                      '&:hover': {
                         borderColor: darkMode ? '#4b5563' : '#1f2937',
                         color: darkMode ? '#4b5563' : '#1f2937',
@@ -98,6 +147,13 @@ function PortfolioBlock(props) {
                         padding: '0.75rem 1rem',
                         fontSize: '0.875rem',
                         borderRadius: '8px',
+                        /* Mobile-only Live Demo button fixes */
+                        '@media (max-width: 767px)': {
+                           padding: '0.5rem 0.75rem',
+                           fontSize: 'clamp(0.8rem, 3.5vw, 0.875rem)',
+                           minHeight: '44px',
+                           borderRadius: '6px'
+                        },
                         '&:hover': {
                            backgroundColor: 'rgba(59, 130, 246, 0.1)',
                            transform: 'none'

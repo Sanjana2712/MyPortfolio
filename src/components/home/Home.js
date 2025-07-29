@@ -18,7 +18,42 @@ export default function Home({innerRef}) {
               maxWidth: '1400px',
               width: '100%',
               mx: 'auto',
-              px: {xs: 2, md: 4, lg: 6}
+              px: {xs: 2, md: 4, lg: 6},
+              
+              /* Mobile phones (320px - 767px) */
+              '@media screen and (max-width: 767px)': {
+                 flexDirection: 'column',
+                 minHeight: 'calc(100vh - 80px)',
+                 px: 1,
+                 py: 6,
+                 textAlign: 'center',
+                 justifyContent: 'center',
+                 paddingTop: '8rem'
+              },
+              
+              /* Tablets (768px - 1023px) */
+              '@media screen and (min-width: 768px) and (max-width: 1023px)': {
+                 flexDirection: 'column',
+                 minHeight: 'calc(100vh - 140px)',
+                 px: 3,
+                 py: 3,
+                 textAlign: 'center',
+                 maxWidth: '100%'
+              },
+              
+              /* Large monitors (2000px+) */
+              '@media screen and (min-width: 2000px)': {
+                 maxWidth: '1600px',
+                 px: 8,
+                 py: 4
+              },
+              
+              /* Ultra-wide monitors (2560px+) */
+              '@media screen and (min-width: 2560px)': {
+                 maxWidth: '2000px',
+                 px: 12,
+                 py: 6
+              }
            }}>
          
          {/* Constellation Background - Full Screen */}
@@ -172,8 +207,50 @@ export default function Home({innerRef}) {
             </svg>
          </Box>
 
-         <Box className={classNames(Style.avatar, Style.shadowed)} alt={'image of developer'} style={{background: info.gradient, position: 'relative', zIndex: 1, marginTop: '-100px'}} component={'img'} src={me} 
-         width={{xs: '28vh', md: '30vh'}} height={{xs: '22vh', md: '30vh'}} borderRadius={'50%'} mb={{xs: '1rem', sm: 0}} mr={{xs: 0, md: '3rem'}}/>
+         <Box className={classNames(Style.avatar, Style.shadowed)} alt={'image of developer'} 
+              style={{background: info.gradient, position: 'relative', zIndex: 1, marginTop: '-100px'}} 
+              component={'img'} src={me} 
+              borderRadius={'50%'} 
+              sx={{
+                 width: {xs: '28vh', md: '30vh'},
+                 height: {xs: '22vh', md: '30vh'},
+                 mb: {xs: '1rem', sm: 0},
+                 mr: {xs: 0, md: '3rem'},
+                 
+                 /* Mobile phones (320px - 767px) */
+                 '@media screen and (max-width: 767px)': {
+                    width: 'clamp(120px, 25vw, 200px)',
+                    height: 'clamp(120px, 25vw, 200px)',
+                    marginTop: '0',
+                    mb: '1.5rem',
+                    mr: 0
+                 },
+                 
+                 /* Tablets (768px - 1023px) */
+                 '@media screen and (min-width: 768px) and (max-width: 1023px)': {
+                    width: 'clamp(150px, 20vw, 250px)',
+                    height: 'clamp(150px, 20vw, 250px)',
+                    marginTop: '-75px',
+                    mb: '2rem',
+                    mr: 0
+                 },
+                 
+                 /* Large monitors (2000px+) */
+                 '@media screen and (min-width: 2000px)': {
+                    width: 'clamp(300px, 15vw, 400px)',
+                    height: 'clamp(300px, 15vw, 400px)',
+                    marginTop: '-120px',
+                    mr: '4rem'
+                 },
+                 
+                 /* Ultra-wide monitors (2560px+) */
+                 '@media screen and (min-width: 2560px)': {
+                    width: 'clamp(350px, 12vw, 450px)',
+                    height: 'clamp(350px, 12vw, 450px)',
+                    marginTop: '-140px',
+                    mr: '5rem'
+                 }
+              }}/>
          <Box sx={{ position: 'relative', zIndex: 1 }}>
             <h2>Hello, I'm <span>{info.firstName}!</span>
             </h2>
@@ -187,7 +264,53 @@ export default function Home({innerRef}) {
             showCursor={true}
             />
             </h2>
-            <Box maxWidth={{xs: '95%', md: '85ch'}} style={{fontSize:'17px',marginBottom:'2rem',marginTop:'1rem',fontFamily:'roboto',color:'rgb(136, 146, 176)',lineHeight:'1.6'}}>
+            <Box maxWidth={{xs: '95%', md: '85ch'}} 
+                 sx={{
+                    fontSize: '17px',
+                    marginBottom: '2rem',
+                    marginTop: '1rem',
+                    fontFamily: 'roboto',
+                    color: 'rgb(136, 146, 176)',
+                    lineHeight: '1.6',
+                    
+                    /* Mobile phones (320px - 767px) */
+                    '@media screen and (max-width: 767px)': {
+                       fontSize: 'clamp(14px, 4vw, 16px)',
+                       lineHeight: '1.5',
+                       marginBottom: '1.5rem',
+                       marginTop: '0.75rem',
+                       textAlign: 'center',
+                       px: 1
+                    },
+                    
+                    /* Tablets (768px - 1023px) */
+                    '@media screen and (min-width: 768px) and (max-width: 1023px)': {
+                       fontSize: 'clamp(15px, 2.5vw, 18px)',
+                       lineHeight: '1.55',
+                       marginBottom: '1.75rem',
+                       marginTop: '1rem',
+                       textAlign: 'center',
+                       maxWidth: '90%'
+                    },
+                    
+                    /* Large monitors (2000px+) */
+                    '@media screen and (min-width: 2000px)': {
+                       fontSize: 'clamp(19px, 1.2vw, 22px)',
+                       lineHeight: '1.7',
+                       marginBottom: '2.5rem',
+                       marginTop: '1.5rem',
+                       maxWidth: '75ch'
+                    },
+                    
+                    /* Ultra-wide monitors (2560px+) */
+                    '@media screen and (min-width: 2560px)': {
+                       fontSize: 'clamp(21px, 1vw, 24px)',
+                       lineHeight: '1.75',
+                       marginBottom: '3rem',
+                       marginTop: '2rem',
+                       maxWidth: '80ch'
+                    }
+                 }}>
                <span>Passionate full-stack developer with a keen eye for creating seamless digital experiences. I specialize in building robust, scalable web applications using modern technologies like React, Node.js, and cloud platforms. With over two years of hands-on experience, I thrive on transforming complex business requirements into intuitive, high-performance solutions that users love.</span>
             </Box>
 
